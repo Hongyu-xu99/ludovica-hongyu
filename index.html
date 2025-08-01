@@ -28,7 +28,54 @@
 
     <section class="rsvp">
       <h2>💌 Conferma la Presenza</h2>
-      <form action="mailto:tua.email@gmail.com" method="POST">
+      <form id="rsvpForm">
+        <!-- Primo adulto: nome e cognome principali -->
+        <div style="margin-bottom:0.75em;">
+          <label style="display:inline-block; margin-right:1em;">
+            Nome: <input type="text" id="mainNome" name="mainNome" required>
+          </label>
+          <label style="display:inline-block;">
+            Cognome: <input type="text" id="mainCognome" name="mainCognome" required>
+          </label>
+        </div>
+
+        <div style="margin-bottom:0.75em;">
+          <label>
+            Quanti adulti?
+            <input type="number" id="adultsCount" min="1" value="1" required>
+          </label>
+          <div id="adultsNamesDiv" style="margin-top:0.5em;"></div>
+        </div>
+
+        <div style="margin-bottom:0.75em;">
+          <label>
+            Quanti bambini?
+            <input type="number" id="childrenCount" min="0" value="0" required>
+          </label>
+          <div id="childrenNames" style="margin-top:0.5em;"></div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label for="note" style="display:block; font-weight:600; margin-bottom:4px;">
+            Intolleranze / Note
+          </label>
+          <textarea
+            id="note"
+            name="note"
+            rows="4"
+            placeholder="Es. senza glutine, no lattosio, allergie..."
+            style="width:100%; padding:8px; border:1px solid #ccc; border-radius:6px; resize:vertical; font-family:inherit; font-size:1rem;"
+          ></textarea>
+          <div style="font-size:0.8rem; color:#555; margin-top:2px;">
+            Puoi indicare intolleranze, preferenze alimentari o altre note.
+          </div>
+        </div>
+
+        <button type="submit">Invia</button>
+      </form>
+
+      <div id="responseMessage" style="margin-top:1em;color:green;"></div>
+      <!-- <form action="mailto:tua.email@gmail.com" method="POST">
         <label>Nome e Cognome
           <input type="text" name="name" required>
         </label>
@@ -42,7 +89,27 @@
           <textarea name="message"></textarea>
         </label>
         <button type="submit" class="btn">Invia</button>
-      </form>
+      </form> -->
+      <!-- <form id="rsvpForm">
+        <label>Nome e Cognome
+          <input type="text" name="name" required>
+        </label>
+        <label>Quanti adulti?
+          <input type="number" id="adultsCount" name="numeriAdulti" min="0" value="0" required>
+        </label>
+        <div id="adultsNames"></div>
+
+        <label>Quanti bambini?
+          <input type="number" id="childrenCount" name="numeriBambini" min="0" value="0" required>
+        </label>
+        <div id="childrenNames"></div>
+
+        <label>Comunicaci se hai delle intolleranze
+          <textarea name="message"></textarea>
+        </label>
+
+        <button type="submit">Invia</button>
+      </form> -->
     </section>
   </main>
 
