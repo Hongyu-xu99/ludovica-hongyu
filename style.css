@@ -45,10 +45,7 @@
   #countdown {
     margin-top: 20px;
     font-size: 1.8rem;
-    /* color: var(--avorio); */
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: bold; 
-   -webkit-text-stroke: 1px var(--avorio);; /* contorno */
+    color: var(--avorio);
   }
   
   main {
