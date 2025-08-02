@@ -112,7 +112,8 @@ const timer = setInterval(function() {
 
     // invio al backend
     try {
-      const resp = await fetch('http://localhost:8080/invitati/api/save-invitati', {
+      const resp = await fetch('https://backend-wedding-wbox.onrender.com/invitati/api/save-invitati',
+      {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(invitati)
